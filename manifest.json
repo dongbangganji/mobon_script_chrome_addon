@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "mobon script check",
+  "version": "1.6.1",
+  "version_name": "1.6.1 beta",
+  "description": "Shortcut key : ctrl + Shift + Q |1.6.1 관리자 페이지 링크 추가|1.6 패치정보 고도몰 임대 추가|1.5 패치정보 makeshop 추가",
+  "permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "browser_action": {
+    "default_title": "test",
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Q",
+        "mac": "MacCtrl+Shift+Q"
+      },
+      "description": "popup.html"
+    }
+  }
+}

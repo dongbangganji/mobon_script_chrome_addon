@@ -1,0 +1,952 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset_css.css">
+    <link rel="stylesheet" href="mobon_script_css.css">
+    <script src="mobon_script_check.js"></script>
+    <script src="jquery-latest.min.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="tab_group">
+        <div class="type_list_group">
+            <button class="btn type_group_btn" data-type="cafe24" id="cafe24_group_btn">cafe24</button>
+            <button class="btn type_group_btn" data-type="makeshop" id="makeshop_group_btn">메이크샵D4</button>
+            <button class="btn type_group_btn" data-type="godomall_rent" id="godomall_rent_group_btn">고도몰5_임대</button>
+        </div>
+        <div class="type_list_group">
+            <button class="btn type_group_btn" data-type="insite" id="insite_group_btn">인사이트</button>
+        </div>
+    </div>
+
+    <div class="tab_group type_tab_group hide" id="godomall_rent_group">
+        <div class="btn_group">
+            <p class="form_group"><input type="text" id='godomall_rent_mobon_id' placeholder="mobon_id"/></p>
+        </div>
+        <hr>
+        <div class="btn_group">
+            <p>웹사이트</p>
+            <p>
+                <button type="button" class="btn godomall_rent_btn" id="godomall_rent_web_footer_btn"     data-type="godomall_rent_web_footer">footer</button>
+                <button type="button" class="btn godomall_rent_btn" id="godomall_rent_web_detail_btn"     data-type="godomall_rent_web_detail">상품상세</button>
+                <button type="button" class="btn godomall_rent_btn" id="godomall_rent_web_cart_btn"       data-type="godomall_rent_web_cart">장바구니</button>
+                <button type="button" class="btn godomall_rent_btn" id="godomall_rent_web_conversion_btn" data-type="godomall_rent_web_conversion">주문완료</button>
+            </p>
+        </div>
+        <hr>
+        <div class="btn_group">
+            <p>모바일</p>
+            <p>
+                <button type="button" class="btn godomall_rent_btn" id="godomall_rent_mobile_footer_btn"     data-type="godomall_rent_mobile_footer">footer</button>
+                <button type="button" class="btn godomall_rent_btn" id="godomall_rent_mobile_detail_btn"     data-type="godomall_rent_mobile_detail">상품상세</button>
+                <button type="button" class="btn godomall_rent_btn" id="godomall_rent_mobile_cart_btn"       data-type="godomall_rent_mobile_cart">장바구니</button>
+                <button type="button" class="btn godomall_rent_btn" id="godomall_rent_mobile_conversion_btn" data-type="godomall_rent_mobile_conversion">주문완료</button>
+            </p>
+        </div>
+        <hr>
+        <div class="btn_group">
+            <p>기타</p>
+            <p>
+                <a href="https://gdadmin.dhuman.co.kr/base/login.php" target="_blank"><button type="button" class="btn">관리자페이지</button></a>
+            </p>
+        </div>
+        <hr>
+        <div class="divTable">
+            <div class="divTableBody">
+
+                <div class="divTableRow godomall_rent_tab_group hide" id="godomall_rent_web_footer">
+                    <div class="divTableCell">
+                        <p class="title">web footer</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            [전체 레이아웃] - [하단 레이아웃]
+                        </p>
+                        <p>
+<textarea class="hide" id="godomall_rent_web_footer_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+		(function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_godomall_rent.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'common', '{{mobon_id}}', { device: 'W' });
+    enp('send', 'common', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                            <textarea id="godomall_rent_web_footer_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow godomall_rent_tab_group hide" id="godomall_rent_web_detail">
+                    <div class="divTableCell">
+                        <p class="title">web 상품상세</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            [상품] - [상품상세화면]
+                        </p>
+                        <p>
+<textarea class="hide" id="godomall_rent_web_detail_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_godomall_rent.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    var ENP_VAR = {};
+    <!--{ ? goodsView['soldOut'] =='y'}-->
+    ENP_VAR.soldOut = 'Y';
+    <!--{ : }-->
+    ENP_VAR.soldOut = 'N';
+    <!--{ / }-->
+    enp('create', 'collect', '{{mobon_id}}', { device: 'W' });
+    enp('create', 'cart', '{{mobon_id}}', { device: 'W' });
+    enp('create', 'wish', '{{mobon_id}}', { device: 'W' });
+    enp("create", "conversion", '{{mobon_id}}', { device: 'W', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                            <textarea id="godomall_rent_web_detail_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow godomall_rent_tab_group hide" id="godomall_rent_web_cart">
+                    <div class="divTableCell">
+                        <p class="title">web 장바구니 페이지</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            [주문] - [장바구니]
+                        </p>
+                        <p>
+<textarea class="hide" id="godomall_rent_web_cart_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_godomall_rent.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'W', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                            <textarea id="godomall_rent_web_cart_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow godomall_rent_tab_group hide" id="godomall_rent_web_conversion">
+                    <div class="divTableCell">
+                        <p class="title">web 주문완료 페이지</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            [주문] - [주문완료]
+                        </p>
+                        <p>
+<textarea class="hide" id="godomall_rent_web_conversion_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_godomall_rent.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'W' });
+    enp('send', 'conversion', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                            <textarea id="godomall_rent_web_conversion_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow godomall_rent_tab_group hide" id="godomall_rent_mobile_footer">
+                    <div class="divTableCell">
+                        <p class="title">mobile footer</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            [전체 레이아웃] - [하단 레이아웃]
+                        </p>
+                        <p>
+<textarea class="hide" id="godomall_rent_mobile_footer_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_godomall_rent.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'common', '{{mobon_id}}', { device: 'M' });
+    enp('send', 'common', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                            <textarea id="godomall_rent_mobile_footer_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow godomall_rent_tab_group hide" id="godomall_rent_mobile_detail">
+                    <div class="divTableCell">
+                        <p class="title">mobile 상품상세</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            [상품] - [상품상세]
+                        </p>
+                        <p>
+<textarea class="hide" id="godomall_rent_mobile_detail_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_godomall_rent.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    var ENP_VAR = {};
+    <!--{ ? goodsView['soldOut'] =='y'}-->
+    ENP_VAR.soldOut = 'Y';
+    <!--{ : }-->
+    ENP_VAR.soldOut = 'N';
+    <!--{ / }-->
+    enp('create', 'collect', '{{mobon_id}}', { device: 'M' });
+    enp('create', 'cart', '{{mobon_id}}', { device: 'M' });
+    enp('create', 'wish', '{{mobon_id}}', { device: 'M' });
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'M', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                            <textarea id="godomall_rent_mobile_detail_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow godomall_rent_tab_group hide" id="godomall_rent_mobile_cart">
+                    <div class="divTableCell">
+                        <p class="title">mobile 장바구니 페이지</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            [주문관련] - [장바구니]
+                        </p>
+                        <p>
+<textarea class="hide" id="godomall_rent_mobile_cart_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_godomall_rent.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'M', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                            <textarea id="godomall_rent_mobile_cart_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow godomall_rent_tab_group hide" id="godomall_rent_mobile_conversion">
+                    <div class="divTableCell">
+                        <p class="title">mobile 주문완료 페이지</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            [주문] - [주문완료]
+                        </p>
+                        <p>
+<textarea class="hide" id="godomall_rent_mobile_conversion_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_godomall_rent.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'M' });
+    enp('send', 'conversion', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                            <textarea id="godomall_rent_mobile_conversion_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="tab_group type_tab_group hide" id="makeshop_group">
+        <div class="btn_group">
+            <p class="form_group"><input type="text" id='makeshop_mobon_id' placeholder="mobon_id"/></p>
+        </div>
+        <hr>
+        <div class="btn_group">
+            <p>웹사이트</p>
+            <p>
+                <button type="button" class="btn makeshop_btn" id="makeshop_web_footer_btn"     data-type="makeshop_web_footer">footer</button>
+                <button type="button" class="btn makeshop_btn" id="makeshop_web_detail_btn"     data-type="makeshop_web_detail">상품상세</button>
+                <button type="button" class="btn makeshop_btn" id="makeshop_web_cart_btn"       data-type="makeshop_web_cart">장바구니</button>
+                <button type="button" class="btn makeshop_btn" id="makeshop_web_conversion_btn" data-type="makeshop_web_conversion">주문완료</button>
+            </p>
+        </div>
+        <hr>
+        <div class="btn_group">
+            <p>모바일</p>
+            <p>
+                <button type="button" class="btn makeshop_btn" id="makeshop_mobile_footer_btn"     data-type="makeshop_mobile_footer">footer</button>
+                <button type="button" class="btn makeshop_btn" id="makeshop_mobile_detail_btn"     data-type="makeshop_mobile_detail">상품상세</button>
+                <button type="button" class="btn makeshop_btn" id="makeshop_mobile_cart_btn"       data-type="makeshop_mobile_cart">장바구니</button>
+                <button type="button" class="btn makeshop_btn" id="makeshop_mobile_conversion_btn" data-type="makeshop_mobile_conversion">주문완료</button>
+            </p>
+        </div>
+        <hr>
+        <div class="btn_group">
+            <p>기타</p>
+            <p><button type="button" class="btn makeshop_btn" id="makeshop_tooltip_group_btn"     data-type="makeshop_tooltip_group">툴팁</button></p>
+        </div>
+        <hr>
+        <div class="divTable">
+            <div class="divTableBody">
+
+                <div class="divTableRow makeshop_tab_group hide" id="makeshop_web_footer">
+                    <div class="divTableCell">
+                        <p class="title">web footer</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            [상단/측면/하단 디자인] - [하단] - [기본 하단]
+                        </p>
+                        <p>
+<textarea class="hide" id="makeshop_web_footer_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_makeshop_d4.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'common', '{{mobon_id}}', { device: 'W' });
+    enp('send', 'common', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                            <textarea id="makeshop_web_footer_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow makeshop_tab_group hide" id="makeshop_web_detail">
+                    <div class="divTableCell">
+                        <p class="title">web 상품상세</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            [중앙 디자인] - [상품관련] - [상품 상세 페이지] - [기본 상세 페이지]<br>
+                            🚨 장바구니 또는 찜버튼 클릭시 이벤트 동작 안할때 버튼 Class에 아래 Class 추가<br>
+                            장바구니 :  enp_mobon_cart   /   찜 :  enp_mobon_wish<br>
+                        </p>
+                        <p>
+<textarea class="hide" id="makeshop_web_detail_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_makeshop_d4.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    var ENP_VAR = {};
+    ENP_VAR.soldOut = '<!--/if_soldout/-->Y<!--/else/-->N<!--/end_if/-->';
+    ENP_VAR.price = '<!--/number/price_consumer/-->';
+    ENP_VAR.dcPrice = '<!--/if_dc_price_sell(+1)/--><!--/number/dc_price_sell/--><!--/else/--><!--/number/price_sell/--><!--/end_if/-->';
+    enp('create', 'collect', '{{mobon_id}}', { device: 'W' });
+    enp('create', 'cart', '{{mobon_id}}', { device: 'W' });
+    enp('create', 'wish', '{{mobon_id}}', { device: 'W' });
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'W', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                            <textarea id="makeshop_web_detail_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow makeshop_tab_group hide" id="makeshop_web_cart">
+                    <div class="divTableCell">
+                        <p class="title">web 장바구니 페이지</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            [중앙 디자인] - [주문관련] - [주문조회/후기 팝업] - [장바구니]
+                        </p>
+                        <p>
+<textarea class="hide" id="makeshop_web_cart_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_makeshop_d4.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'W', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                            <textarea id="makeshop_web_cart_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow makeshop_tab_group hide" id="makeshop_web_conversion">
+                    <div class="divTableCell">
+                        <p class="title">web 주문완료 페이지</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            [중앙 디자인] - [주문관련] - [주문조회/후기 팝업] - [주문 완료]
+                        </p>
+                        <p>
+<textarea class="hide" id="makeshop_web_conversion_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_makeshop_d4.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'W' });
+    enp('send', 'conversion', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                            <textarea id="makeshop_web_conversion_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow makeshop_tab_group hide" id="makeshop_mobile_footer">
+                    <div class="divTableCell">
+                        <p class="title">mobile footer</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            [하단] - [기본 하단]
+                        </p>
+                        <p>
+<textarea class="hide" id="makeshop_mobile_footer_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_makeshop_d4.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'common', '{{mobon_id}}', { device: 'M' });
+    enp('send', 'common', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                            <textarea id="makeshop_mobile_footer_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow makeshop_tab_group hide" id="makeshop_mobile_detail">
+                    <div class="divTableCell">
+                        <p class="title">mobile 상품상세</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            [중앙 디자인] - [상품관련] - [상품 상세 페이지] - [기본 상세 페이지]<br>
+                            🚨 장바구니 또는 찜버튼 클릭시 이벤트 동작 안할때 버튼 Class에 아래 Class 추가<br>
+                            장바구니 :  enp_mobon_cart   /   찜 :  enp_mobon_wish
+                        </p>
+                        <p>
+<textarea class="hide" id="makeshop_mobile_detail_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_makeshop_d4.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    var ENP_VAR = {};
+    ENP_VAR.soldOut = '<!--/if_soldout/-->Y<!--/else/-->N<!--/end_if/-->';
+    ENP_VAR.price = '<!--/number/price_consumer/-->';
+    ENP_VAR.dcPrice = '<!--/if_dc_price_sell(+1)/--><!--/number/dc_price_sell/--><!--/else/--><!--/number/price_sell/--><!--/end_if/-->';
+    enp('create', 'collect', '{{mobon_id}}', { device: 'M' });
+    enp('create', 'cart', '{{mobon_id}}', { device: 'M' });
+    enp('create', 'wish', '{{mobon_id}}', { device: 'M' });
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'M', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                            <textarea id="makeshop_mobile_detail_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow makeshop_tab_group hide" id="makeshop_mobile_cart">
+                    <div class="divTableCell">
+                        <p class="title">mobile 장바구니 페이지</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            [주문관련] - [장바구니]
+                        </p>
+                        <p>
+<textarea class="hide" id="makeshop_mobile_cart_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_makeshop_d4.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'M', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                            <textarea id="makeshop_mobile_cart_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow makeshop_tab_group hide" id="makeshop_mobile_conversion">
+                    <div class="divTableCell">
+                        <p class="title">mobile 주문완료 페이지</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            [주문관련] - [주문 완료]
+                        </p>
+                        <p>
+<textarea class="hide" id="makeshop_mobile_conversion_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_makeshop_d4.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    var ENP_VAR = {};
+    ENP_VAR.product = [];
+    <!--/loop_order_product/-->
+    ENP_VAR.product.push({ totalPrice: "<!--/order_product@price/-->"});
+    <!--/end_loop/-->
+
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'M' });
+    enp('send', 'conversion', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                            <textarea id="makeshop_mobile_conversion_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="makeshop_tooltip_group" class="hide">
+            메이크샵 3.x 버전 코드상에서 확인이 불가능할떄 처리 방법<br>
+            <br>
+            출처 : 김 대 웅 대리<br>
+            <br>
+            관리자 [마케팅센터]에서 포탈광고 탭의 모비온을 클릭하신 후<br>
+            접속되는 페이지 왼쪽 영역에서<br>
+            [네트워크 광고 > 네트워크 광고 기본 설정]으로 접속해주세요.<br>
+            그리고 모비온 설정 항목을 확인하시어<br>
+            [삭제] 버튼을 클릭하셔서 삭제하신 후 확인 부탁드립니다.<br>
+        </div>
+    </div>
+
+    <div class="tab_group type_tab_group hide" id="cafe24_group">
+        <div class="btn_group">
+            <p class="form_group"><input type="text" id='cafe24_mobon_id' placeholder="mobon_id"/></p>
+        </div>
+        <hr>
+        <div class="btn_group">
+            <p>웹사이트</p>
+            <p>
+                <button type="button" class="btn cafe24_btn" id="cafe24_web_footer_btn"     data-type="cafe24_web_footer">footer</button>
+                <button type="button" class="btn cafe24_btn" id="cafe24_web_detail_btn"     data-type="cafe24_web_detail">상품상세</button>
+                <button type="button" class="btn cafe24_btn" id="cafe24_web_cart_btn"       data-type="cafe24_web_cart">장바구니</button>
+                <button type="button" class="btn cafe24_btn" id="cafe24_web_conversion_btn" data-type="cafe24_web_conversion">주문완료</button>
+            </p>
+        </div>
+        <hr>
+        <div class="btn_group">
+            <p>모바일</p>
+            <p>
+                <button type="button" class="btn cafe24_btn" id="cafe24_mobile_footer_btn"     data-type="cafe24_mobile_footer">footer</button>
+                <button type="button" class="btn cafe24_btn" id="cafe24_mobile_detail_btn"     data-type="cafe24_mobile_detail">상품상세</button>
+                <button type="button" class="btn cafe24_btn" id="cafe24_mobile_cart_btn"       data-type="cafe24_mobile_cart">장바구니</button>
+                <button type="button" class="btn cafe24_btn" id="cafe24_mobile_conversion_btn" data-type="cafe24_mobile_conversion">주문완료</button>
+            </p>
+        </div>
+        <hr>
+        <div class="btn_group">
+            <p>기타</p>
+            <p>
+<!--                <button type="button" class="btn cafe24_btn" id="cafe24_tooltip_group_btn" data-type="cafe24_tooltip_group">툴팁</button>-->
+                <a href="https://eclogin.cafe24.com/Shop/" target="_blank"><button type="button" class="btn">관리자페이지</button></a>
+            </p>
+        </div>
+        <hr>
+        <div class="divTable">
+            <div class="divTableBody">
+
+                <div class="divTableRow cafe24_tab_group hide" id="cafe24_web_footer">
+                    <div class="divTableCell">
+                        <p class="title">web footer</p>
+                        <p>
+<textarea class="hide" id="cafe24_web_footer_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_cafe24_smart.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'common', '{{mobon_id}}', { device: 'W' });
+    enp('send', 'common', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+<textarea id="cafe24_web_footer_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow cafe24_tab_group hide" id="cafe24_web_detail">
+                    <div class="divTableCell">
+                        <p class="title">web 상품상세</p>
+                        <p>
+<textarea class="hide" id="cafe24_web_detail_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_cafe24_smart.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'collect', '{{mobon_id}}', { device: 'W' });
+    enp('create', 'cart', '{{mobon_id}}', { device: 'W' });
+    enp('create', 'wish', '{{mobon_id}}', { device: 'W' });
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'W', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+<textarea id="cafe24_web_detail_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow cafe24_tab_group hide" id="cafe24_web_cart">
+                    <div class="divTableCell">
+                        <p class="title">web 장바구니 페이지</p>
+                        <p>
+<textarea class="hide" id="cafe24_web_cart_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_cafe24_smart.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'W', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+<textarea id="cafe24_web_cart_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow cafe24_tab_group hide" id="cafe24_web_conversion">
+                    <div class="divTableCell">
+                        <p class="title">web 주문완료 페이지</p>
+                        <p>
+<textarea class="hide" id="cafe24_web_conversion_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_cafe24_smart.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'W' });
+    enp('send', 'conversion', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+<textarea id="cafe24_web_conversion_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow cafe24_tab_group hide" id="cafe24_mobile_footer">
+                    <div class="divTableCell">
+                        <p class="title">mobile footer</p>
+                        <p>
+<textarea class="hide" id="cafe24_mobile_footer_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_cafe24_smart.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'common', '{{mobon_id}}', { device: 'M' });
+    enp('send', 'common', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+<textarea id="cafe24_mobile_footer_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow cafe24_tab_group hide" id="cafe24_mobile_detail">
+                    <div class="divTableCell">
+                        <p class="title">mobile 상품상세</p>
+                        <p>
+<textarea class="hide" id="cafe24_mobile_detail_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_cafe24_smart.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'collect', '{{mobon_id}}', { device: 'M' });
+    enp('create', 'cart', '{{mobon_id}}', { device: 'M' });
+    enp('create', 'wish', '{{mobon_id}}', { device: 'M' });
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'M', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+<textarea id="cafe24_mobile_detail_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow cafe24_tab_group hide" id="cafe24_mobile_cart">
+                    <div class="divTableCell">
+                        <p class="title">mobile 장바구니 페이지</p>
+                        <p>
+<textarea class="hide" id="cafe24_mobile_cart_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_cafe24_smart.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'M', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+<textarea id="cafe24_mobile_cart_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow cafe24_tab_group hide" id="cafe24_mobile_conversion">
+                    <div class="divTableCell">
+                        <p class="title">mobile 주문완료 페이지</p>
+                        <p>
+<textarea class="hide" id="cafe24_mobile_conversion_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_cafe24_smart.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'M' });
+    enp('send', 'conversion', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+<textarea id="cafe24_mobile_conversion_textarea_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab_group type_tab_group hide" id="insite_group">
+        <div class="btn_group">
+            <button type="button" class="btn" id="insite_reset">초기화</button>
+            <button type="button" class="btn" id="insite_insert">인사이트삽입</button>
+        <div class="btn_group">
+        <hr>
+        </div>
+            <button type="button" class="btn" id="detail_btn">상세이동</button>
+            <button type="button" class="btn" id="together_btn">같이이동</button>
+            <button type="button" class="btn" id="ai_detail_btn">AI이동</button>
+        </div>
+        <hr>
+        <div class="btn_group">
+            <button type="button" class="btn insite_btn" id="insite_Main_btn" data-type="Main">메인화면 지면</button>
+            <button type="button" class="btn insite_btn" id="insite_breakAway_btn" data-type="breakAway">이탈방지(팝업) 지면</button>
+            <button type="button" class="btn insite_btn" id="insite_breakAwayFull_btn" data-type="breakAwayFull">이탈-전면배너</button>
+            <button type="button" class="btn insite_btn" id="insite_shopDetail_btn" data-type="shopDetail">상품상세-추천상품(대체상품)</button>
+            <button type="button" class="btn insite_btn" id="insite_shopDetailTogether_btn" data-type="shopDetailTogether">상품상세 - 같이 구매 한 상품</button>
+            <button type="button" class="btn insite_btn" id="insite_naverQuick_btn" data-type="naverQuick">네이버 퀵링크</button>
+            <button type="button" class="btn insite_btn" id="insite_naverBacon_btn" data-type="naverBacon">네이버 바콘</button>
+            <button type="button" class="btn insite_btn" id="insite_DBCollection_btn" data-type="DBCollection">이탈-DB수집</button>
+            <button type="button" class="btn insite_btn" id="insite_aiRecommend_btn" data-type="aiRecommend">상품 상세 - AI 추천상품</button>
+
+        </div>
+        <hr>
+        <div class="divTable">
+            <div class="divTableBody">
+                <div class="divTableRow tab-insite" id="insite-Main" style="display: none;">
+                    <div class="divTableCell">
+                        <p class="title">메인화면 지면</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            웹, 모바일 버전 메인 페이지
+                        </p>
+                        <p class="form_group"><input type="text" class="sno-input-box" placeholder="메인화면 지면" data-type="Main" /></p>
+                        <p>
+<textarea class="insite-textarea hide" data-type="Main">
+<!-- Enliple Insite Main start -->
+<script type="text/javascript">
+(function(m,b,r,i,s){m.mbris=m.mbris||function(){(m.mbris.q=m.mbris.q||[]).push(arguments)};i=b.createElement(r);i.async=!0;i.defer=!0;i.src="https://cdn.megadata.co.kr/dist/prod/enp_mbris.min.js";0<b.querySelectorAll("script[src*=enp_mbris]").length&&m.ENP_MBRIS_INVOKE?m.ENP_MBRIS_INVOKE():(s=b.getElementsByTagName(r)[0],s.parentNode.insertBefore(i,s))})(window,document,"script");
+mbris("{{sno}}");
+</script>
+<!-- Enliple Insite Main end -->
+</textarea>
+<textarea class="insite-textarea" data-type="Main_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+                <div class="divTableRow tab-insite" id="insite-breakAway" style="display: none;">
+                    <div class="divTableCell">
+                        <p class="title">이탈방지(팝업) 지면</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            모든 페이지에 노출되는 레이아웃 (footer 등)
+                            <b>이탈방지 지면 사용시 전면배너 사용불가</b>
+                        </p>
+                        <p class="form_group"><input type="text" class="sno-input-box" placeholder="이탈방지(팝업) 지면" data-type="breakAway" /></p>
+                        <p>
+<textarea class="insite-textarea hide" data-type="breakAway">
+<!-- Enliple Insite breakAway Popup start -->
+<script type="text/javascript">
+(function(m,b,r,i,s){m.mbris=m.mbris||function(){(m.mbris.q=m.mbris.q||[]).push(arguments)};i=b.createElement(r);i.async=!0;i.defer=!0;i.src="https://cdn.megadata.co.kr/dist/prod/enp_mbris.min.js";0<b.querySelectorAll("script[src*=enp_mbris]").length&&m.ENP_MBRIS_INVOKE?m.ENP_MBRIS_INVOKE():(s=b.getElementsByTagName(r)[0],s.parentNode.insertBefore(i,s))})(window,document,"script");
+mbris("{{sno}}");
+</script>
+<!-- Enliple Insite breakAway Popup end -->
+</textarea>
+<textarea class="insite-textarea" data-type="breakAway_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+                <div class="divTableRow tab-insite" id="insite-breakAwayFull" style="display: none;">
+                    <div class="divTableCell">
+                        <p class="title">이탈-전면배너</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            모든 페이지에 노출되는 레이아웃 (footer 등)
+                            <b>전면배너 사용시 이탈방지 지면 사용불가</b>
+                        </p>
+                        <p class="form_group"><input type="text" class="sno-input-box" placeholder="이탈-전면배너" data-type="breakAwayFull" /></p>
+                        <p>
+<textarea class="insite-textarea hide" data-type="breakAwayFull">
+<!-- Enliple Insite breakAway Full start -->
+<script type="text/javascript">
+(function(m,b,r,i,s){m.mbris=m.mbris||function(){(m.mbris.q=m.mbris.q||[]).push(arguments)};i=b.createElement(r);i.async=!0;i.defer=!0;i.src="https://cdn.megadata.co.kr/dist/prod/enp_mbris.min.js";0<b.querySelectorAll("script[src*=enp_mbris]").length&&m.ENP_MBRIS_INVOKE?m.ENP_MBRIS_INVOKE():(s=b.getElementsByTagName(r)[0],s.parentNode.insertBefore(i,s))})(window,document,"script");
+mbris("{{sno}}");
+</script>
+<!-- Enliple Insite breakAway Full end -->
+</textarea>
+<textarea class="insite-textarea" data-type="breakAwayFull_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+                <div class="divTableRow tab-insite" id="insite-shopDetail" style="display: none;">
+                    <div class="divTableCell">
+                        <p class="title">상품상세-추천상품(대체상품)</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            상품상세 페이지 내의 광고를 노출시킬 위치
+                        </p>
+                        <p class="form_group"><input type="text" class="sno-input-box" placeholder="상품상세-추천상품(대체상품)" data-type="shopDetail" /></p>
+                        <p>
+<textarea class="insite-textarea hide" data-type="shopDetail">
+<!-- Enliple Insite shopDetail start -->
+<script type="text/javascript">
+(function(m,b,r,i,s){m.mbris=m.mbris||function(){(m.mbris.q=m.mbris.q||[]).push(arguments)};i=b.createElement(r);i.async=!0;i.defer=!0;i.src="https://cdn.megadata.co.kr/dist/prod/enp_mbris.min.js";0<b.querySelectorAll("script[src*=enp_mbris]").length&&m.ENP_MBRIS_INVOKE?m.ENP_MBRIS_INVOKE():(s=b.getElementsByTagName(r)[0],s.parentNode.insertBefore(i,s))})(window,document,"script");
+mbris("{{sno}}");
+</script>
+<!-- 광고 노출 영역 -->
+<div id="mbris_detail_section" style="display: none !important; position: relative;"></div>
+<!-- Enliple Insite shopDetail end -->
+</textarea>
+<textarea class="insite-textarea" data-type="shopDetail_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow tab-insite" id="insite-shopDetailTogether" style="display: none;">
+                    <div class="divTableCell">
+                        <p class="title">상품상세 - 같이 구매 한 상품</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            상품상세 페이지 내의 광고를 노출시킬 위치
+                        </p>
+                        <p class="form_group"><input type="text" class="sno-input-box" placeholder="상품상세 - 같이 구매 한 상품" data-type="shopDetailTogether" /></p>
+                        <p>
+<textarea class="insite-textarea hide" data-type="shopDetailTogether">
+<!-- Enliple Insite shopDetail Together start -->
+<script type="text/javascript">
+(function(m,b,r,i,s){m.mbris=m.mbris||function(){(m.mbris.q=m.mbris.q||[]).push(arguments)};i=b.createElement(r);i.async=!0;i.defer=!0;i.src="https://cdn.megadata.co.kr/dist/prod/enp_mbris.min.js";0<b.querySelectorAll("script[src*=enp_mbris]").length&&m.ENP_MBRIS_INVOKE?m.ENP_MBRIS_INVOKE():(s=b.getElementsByTagName(r)[0],s.parentNode.insertBefore(i,s))})(window,document,"script");
+mbris("{{sno}}");
+</script>
+<!-- 광고 노출 영역 -->
+<div id="mbris_ar_detail_section" style="display: none !important; position: relative;"></div>
+<!-- Enliple Insite shopDetail Together end -->
+</textarea>
+<textarea class="insite-textarea" data-type="shopDetailTogether_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow tab-insite" id="insite-naverQuick" style="display: none;">
+                    <div class="divTableCell">
+                        <p class="title">네이버 퀵링크</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            모바일 버전 메인 페이지
+                        </p>
+                        <p class="form_group"><input type="text" class="sno-input-box" placeholder="네이버 퀵링크" data-type="naverQuick" /></p>
+                        <p>
+<textarea class="insite-textarea hide" data-type="naverQuick">
+<!-- Enliple Insite naver Quick  start -->
+<script type="text/javascript">
+(function(m,b,r,i,s){m.mbris=m.mbris||function(){(m.mbris.q=m.mbris.q||[]).push(arguments)};i=b.createElement(r);i.async=!0;i.defer=!0;i.src="https://cdn.megadata.co.kr/dist/prod/enp_mbris.min.js";0<b.querySelectorAll("script[src*=enp_mbris]").length&&m.ENP_MBRIS_INVOKE?m.ENP_MBRIS_INVOKE():(s=b.getElementsByTagName(r)[0],s.parentNode.insertBefore(i,s))})(window,document,"script");
+mbris("{{sno}}");
+</script>
+<!-- Enliple Insite naver Quick end -->
+</textarea>
+<textarea class="insite-textarea" data-type="naverQuick_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow tab-insite" id="insite-naverBacon" style="display: none;">
+                    <div class="divTableCell">
+                        <p class="title">네이버 바콘</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            모든 페이지에 노출되는 레이아웃 (footer 등)<br>
+                            <b>네이버 퀵 링크와 동시 사용 가능</b>
+                        </p>
+                        <p class="form_group"><input type="text" class="sno-input-box" placeholder="네이버 바콘" data-type="naverBacon" /></p>
+                        <p>
+<textarea class="insite-textarea hide" data-type="naverBacon">
+<!-- Enliple Insite naver bacon start -->
+<script type="text/javascript">
+(function(m,b,r,i,s){m.mbris=m.mbris||function(){(m.mbris.q=m.mbris.q||[]).push(arguments)};i=b.createElement(r);i.async=!0;i.defer=!0;i.src="https://cdn.megadata.co.kr/dist/prod/enp_mbris.min.js";0<b.querySelectorAll("script[src*=enp_mbris]").length&&m.ENP_MBRIS_INVOKE?m.ENP_MBRIS_INVOKE():(s=b.getElementsByTagName(r)[0],s.parentNode.insertBefore(i,s))})(window,document,"script");
+mbris("{{sno}}");
+</script>
+<!-- Enliple Insite naver bacon end -->
+</textarea>
+<textarea class="insite-textarea" data-type="naverBacon_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow tab-insite" id="insite-DBCollection" style="display: none;">
+                    <div class="divTableCell">
+                        <p class="title">이탈-DB수집</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            모든 페이지에 노출되는 레이아웃 (footer 등)
+                        </p>
+                        <p class="form_group"><input type="text" class="sno-input-box" placeholder="이탈-DB수집" data-type="DBCollection" /></p>
+                        <p>
+<textarea class="insite-textarea hide" data-type="DBCollection">
+<!-- Enliple Insite DB collection start -->
+<script type="text/javascript">
+(function(m,b,r,i,s){m.mbris=m.mbris||function(){(m.mbris.q=m.mbris.q||[]).push(arguments)};i=b.createElement(r);i.async=!0;i.defer=!0;i.src="https://cdn.megadata.co.kr/dist/prod/enp_mbris.min.js";0<b.querySelectorAll("script[src*=enp_mbris]").length&&m.ENP_MBRIS_INVOKE?m.ENP_MBRIS_INVOKE():(s=b.getElementsByTagName(r)[0],s.parentNode.insertBefore(i,s))})(window,document,"script");
+mbris("{{sno}}");
+</script>
+<!-- Enliple Insite DB collection end -->
+</textarea>
+<textarea class="insite-textarea" data-type="DBCollection_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow tab-insite" id="insite-aiRecommend" style="display: none;">
+                    <div class="divTableCell">
+                        <p class="title">상품 상세 - AI 추천상품</p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            상품상세 페이지 내의 광고를 노출시킬 위치<br>
+                            기존 상품상세와 동일한 UI, 노출되는 목록만 AI파트 데이터로 채움<br>
+                            <b>유료 서비스</b>
+                        </p>
+                        <p class="form_group"><input type="text" class="sno-input-box" placeholder="상품 상세 - AI 추천상품" data-type="aiRecommend" /></p>
+                        <p>
+<textarea class="insite-textarea hide" data-type="aiRecommend">
+<!-- Enliple Insite shopDetail_ai start -->
+<script type="text/javascript">
+(function(m,b,r,i,s){m.mbris=m.mbris||function(){(m.mbris.q=m.mbris.q||[]).push(arguments)};i=b.createElement(r);i.async=!0;i.defer=!0;i.src="<https://cdn.megadata.co.kr/dist/prod/enp_mbris.min.js";0<b.querySelectorAll("script[src*=enp_mbris]").length&&m.ENP_MBRIS_INVOKE?m.ENP_MBRIS_INVOKE():(s=b.getElementsByTagName(r)[0],s.parentNode.insertBefore(i,s))})(window,document,"script>");
+mbris("{{sno}}");
+</script>
+<!-- Enliple Insite shopDetail_ai end -->
+<div id="mbris_ai_detail_section"></div>
+</textarea>
+<textarea class="insite-textarea" data-type="aiRecommend_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
