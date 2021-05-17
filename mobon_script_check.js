@@ -46,6 +46,27 @@ document.addEventListener('DOMContentLoaded',function (){
     }
 
     /**
+     * 복사 기능 추가
+     * @param val
+     */
+    function copyToClipboard(val) {
+        const t = document.createElement("textarea");
+        document.body.appendChild(t);
+        t.value = val;
+        t.select();
+        document.execCommand('copy');
+        document.body.removeChild(t);
+    }
+
+    $(document).on('click','.copy_clipboard',function (){
+        let temp = $(this).parent().parent().find('textarea:last').val();
+        if(!temp){
+            alert('값을 입력해주세요.');
+        }
+        copyToClipboard(temp);
+    })
+
+    /**
      * cafe24 관련 스크립트
      */
     $(document).on('click','.cafe24_btn',function (){
@@ -175,6 +196,49 @@ document.addEventListener('DOMContentLoaded',function (){
         htmlSetLocalStorage('godomall_rent_mobile_conversion',mobon_id);
     });
 
+
+    /**
+     * 독립몰 관련 스크립트
+     */
+    $(document).on('click','.self_btn',function (){
+        $('.self_btn').removeClass('active');
+        $(this).addClass('active');
+        $('.self_tab_group').addClass('hide');
+        $('#'+$(this).data('type')).removeClass('hide');
+        setLocalStorage('self_tab_group', $(this).data('type'));
+    });
+
+    if(getLocalStorage('self_tab_group')){
+        $('#'+getLocalStorage('self_tab_group')+'_btn').addClass('active');
+        $('#'+getLocalStorage('self_tab_group')).removeClass('hide');
+    }
+
+    if(getLocalStorage('self_mobon_id')){
+        $("#self_mobon_id").val(getLocalStorage('self_mobon_id'));
+    }
+
+    htmlGetLocalStorage('self_web_footer');
+    htmlGetLocalStorage('self_web_detail');
+    htmlGetLocalStorage('self_web_cart');
+    htmlGetLocalStorage('self_web_conversion');
+    htmlGetLocalStorage('self_mobile_footer');
+    htmlGetLocalStorage('self_mobile_detail');
+    htmlGetLocalStorage('self_mobile_cart');
+    htmlGetLocalStorage('self_mobile_conversion');
+
+    $(document).on('change','#self_mobon_id',function (){
+        let mobon_id = $(this).val();
+
+        setLocalStorage('self_mobon_id',mobon_id);
+        htmlSetLocalStorage('self_web_footer',mobon_id);
+        htmlSetLocalStorage('self_web_detail',mobon_id);
+        htmlSetLocalStorage('self_web_cart',mobon_id);
+        htmlSetLocalStorage('self_web_conversion',mobon_id);
+        htmlSetLocalStorage('self_mobile_footer',mobon_id);
+        htmlSetLocalStorage('self_mobile_detail',mobon_id);
+        htmlSetLocalStorage('self_mobile_cart',mobon_id);
+        htmlSetLocalStorage('self_mobile_conversion',mobon_id);
+    });
 
     function htmlGetLocalStorage(type){
         if(getLocalStorage(type)){

@@ -1,6 +1,3 @@
-body{
-    width: 150px;
-}
 .type_list_group{
     display: flex;
     width: 400px;
@@ -13,7 +10,7 @@ body{
 }
 
 body{
-    width: 300px;
+    width: 400px;
 }
 .btn_group{
     width: 100%;
@@ -25,6 +22,10 @@ body{
     float: left;
     margin-right: 5px;
     margin-bottom: 5px;
+}
+
+.btn-right{
+    float: right;
 }
 .btn.active, .btn:hover{
     background-color: coral;
