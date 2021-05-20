@@ -12,6 +12,12 @@
 ### 1.6 고도몰 임대 추가
 ### 1.5 makeshop 추가
 
+## 동기화 방법
+1. git 소스를 pull 받으신 후
+2. 크롬 창을 연 뒤 url : chrome://extensions/ 입력
+![img.png](img/img4.png)
+3. 새로 고침 버튼 클릭
+
 ## 설치 방법
 1. 크롬 창을 연 뒤 url : chrome://extensions/ 입력
 2. 개발자 모드 활성화
