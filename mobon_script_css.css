@@ -11,6 +11,23 @@
 
 body{
     width: 400px;
+    position: relative;
+}
+.save_popup{
+    display: none;
+    position: absolute;
+    text-align: center;
+    width: calc(100% - 12px);
+    margin: 6px;
+    top: 25%;
+    vertical-align: middle;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #ffe602;
+    padding: 100px 0;
+    border: 1px solid #ffc402;
+    opacity: 0.9;
+    color: #fff;
 }
 .btn_group{
     width: 100%;

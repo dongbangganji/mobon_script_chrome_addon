@@ -3,7 +3,7 @@
   "name": "mobon script check",
   "version": "1.7.2",
   "version_name": "1.7.2 beta",
-  "description": "Shortcut key : ctrl + Shift + Q |1.7.2 버튼클릭시 자동 복사 기능 추가|1.7.1 설치가이드 링크추가|1.7 독립몰 페이지 링크 추가|1.6.1 관리자 페이지 링크 추가|1.6 패치정보 고도몰 임대 추가|1.5 패치정보 makeshop 추가",
+  "description": "Shortcut key : ctrl + Shift + Q |1.7.3스크립트 트렐로 링크 추가,복사시 임팩트 추가|1.7.2 버튼클릭시 자동 복사 기능 추가",
   "permissions": [
     "https://*/*",
     "http://*/*"

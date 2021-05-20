@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded',function (){
         if(!temp){
             alert('값을 입력해주세요.');
         }
+        $('.save_popup').show().fadeOut( 'slow' );
         copyToClipboard(temp);
     })
 
