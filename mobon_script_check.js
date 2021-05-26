@@ -306,7 +306,6 @@ function ai_mobonscript_move(){
     chrome.tabs.executeScript(null,{code:"document.getElementById('mbris_ai_detail_section').scrollIntoView();"});
 }
 function detail_mobonscript_check() {
-    alert('상세 삽입 완료');
     chrome.tabs.executeScript(null,
         {code:"if(document.getElementById('mbris_detail_section')){" +
                   "console.log('상세있음');" +
@@ -325,7 +324,6 @@ function detail_mobonscript_check() {
     )
 }
 function together_mobonscript_check() {
-    alert('같이 삽입 완료');
     chrome.tabs.executeScript(null,
         {code:" if(document.getElementById('mbris_ar_detail_section')){" +
                     "console.log('같이있음');" +
@@ -345,7 +343,6 @@ function together_mobonscript_check() {
 }
 
 function ai_mobonscript_check() {
-    alert('AI 삽입 완료');
     chrome.tabs.executeScript(null,
         {code:" if(document.getElementById('mbris_ai_detail_section')){" +
                     "console.log('AI있음');" +

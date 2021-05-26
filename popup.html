@@ -228,11 +228,13 @@
         }
     );
 
-    ENP_VAR.conversion.totalPrice = '총 주문 금액';  // 없는 경우 단일 상품의 정보를 이용해 계산
-    ENP_VAR.conversion.totalQty = '총 주문 수량';  // 없는 경우 단일 상품의 정보를 이용해 계산
+    ENP_VAR.conversion.ordCode= '주문 번호';
+    ENP_VAR.conversion.totalPrice = '총 주문 금액';
+    ENP_VAR.conversion.totalQty = '총 주문 수량';
 
     (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_self_hosted.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
-    enp('create', 'conversion', '{{mobon_id}}', { device: 'W', paySys: 'naverPay' });
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'W' });
+    enp('send', 'conversion', '{{mobon_id}}');
 </script>
 <!-- Enliple Tracker End -->
 </textarea>

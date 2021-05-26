@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
   "name": "mobon script check",
-  "version": "1.7.3",
-  "version_name": "1.7.3 beta",
-  "description": "Shortcut key : ctrl + Shift + Q |1.7.3스크립트 트렐로 링크 추가,복사시 임팩트 추가,메이크샵 관리자페이지 추가|1.7.2 버튼클릭시 자동 복사 기능 추가",
+  "version": "1.7.4",
+  "version_name": "1.7.4 beta",
+  "description": "Shortcut key : ctrl + Shift + Q|1.7.4 독립몰 웹결제완료 복사 이슈 수정,인사이트 삽입시 알럿 삭제 |1.7.3스크립트 트렐로 링크 추가,복사시 임팩트 추가,메이크샵 관리자페이지 추가",
   "permissions": [
     "https://*/*",
     "http://*/*"
