@@ -67,6 +67,49 @@ document.addEventListener('DOMContentLoaded',function (){
         copyToClipboard(temp);
     })
 
+    function settingHtmlGetLocalStorage(name){
+        htmlGetLocalStorage(name+'_web_footer');
+        htmlGetLocalStorage(name+'_web_detail');
+        htmlGetLocalStorage(name+'_web_cart');
+        htmlGetLocalStorage(name+'_web_conversion');
+        htmlGetLocalStorage(name+'_mobile_footer');
+        htmlGetLocalStorage(name+'_mobile_detail');
+        htmlGetLocalStorage(name+'_mobile_cart');
+        htmlGetLocalStorage(name+'_mobile_conversion');
+    }
+
+    function settingHtmlSetLocalStorage(name,mobon_id){
+        adIdCheck(mobon_id);
+        setLocalStorage(name+'_mobon_id',mobon_id);
+        htmlSetLocalStorage(name+'_web_footer',mobon_id);
+        htmlSetLocalStorage(name+'_web_detail',mobon_id);
+        htmlSetLocalStorage(name+'_web_cart',mobon_id);
+        htmlSetLocalStorage(name+'_web_conversion',mobon_id);
+        htmlSetLocalStorage(name+'_mobile_footer',mobon_id);
+        htmlSetLocalStorage(name+'_mobile_detail',mobon_id);
+        htmlSetLocalStorage(name+'_mobile_cart',mobon_id);
+        htmlSetLocalStorage(name+'_mobile_conversion',mobon_id);
+    }
+
+    function adIdCheck(name){
+        $.ajax({
+            url: "http://cdn.megadata.co.kr/dist/config/id/"+name+".json",
+            type: "get",
+            cache: false,
+            dataType: "json",
+            data: "",
+            success: function(data){
+                console.log(data.hostingType);
+                console.log(data.version);
+                return true;
+            },
+            error: function (request, status, error){
+                alert('광고주아이디를 확인해주세요');
+                return false;
+            }
+        });
+    }
+
     /**
      * cafe24 관련 스크립트
      */
@@ -87,28 +130,11 @@ document.addEventListener('DOMContentLoaded',function (){
         $("#cafe24_mobon_id").val(getLocalStorage('cafe24_mobon_id'));
     }
 
-
-    htmlGetLocalStorage('cafe24_web_footer');
-    htmlGetLocalStorage('cafe24_web_detail');
-    htmlGetLocalStorage('cafe24_web_cart');
-    htmlGetLocalStorage('cafe24_web_conversion');
-    htmlGetLocalStorage('cafe24_mobile_footer');
-    htmlGetLocalStorage('cafe24_mobile_detail');
-    htmlGetLocalStorage('cafe24_mobile_cart');
-    htmlGetLocalStorage('cafe24_mobile_conversion');
+    settingHtmlGetLocalStorage('cafe24');
 
     $(document).on('change','#cafe24_mobon_id',function (){
         let mobon_id = $(this).val();
-
-        setLocalStorage('cafe24_mobon_id',mobon_id);
-        htmlSetLocalStorage('cafe24_web_footer',mobon_id);
-        htmlSetLocalStorage('cafe24_web_detail',mobon_id);
-        htmlSetLocalStorage('cafe24_web_cart',mobon_id);
-        htmlSetLocalStorage('cafe24_web_conversion',mobon_id);
-        htmlSetLocalStorage('cafe24_mobile_footer',mobon_id);
-        htmlSetLocalStorage('cafe24_mobile_detail',mobon_id);
-        htmlSetLocalStorage('cafe24_mobile_cart',mobon_id);
-        htmlSetLocalStorage('cafe24_mobile_conversion',mobon_id);
+        settingHtmlSetLocalStorage('cafe24',mobon_id)
     });
 
     /**
@@ -131,27 +157,10 @@ document.addEventListener('DOMContentLoaded',function (){
         $("#makeshop_mobon_id").val(getLocalStorage('makeshop_mobon_id'));
     }
 
-    htmlGetLocalStorage('makeshop_web_footer');
-    htmlGetLocalStorage('makeshop_web_detail');
-    htmlGetLocalStorage('makeshop_web_cart');
-    htmlGetLocalStorage('makeshop_web_conversion');
-    htmlGetLocalStorage('makeshop_mobile_footer');
-    htmlGetLocalStorage('makeshop_mobile_detail');
-    htmlGetLocalStorage('makeshop_mobile_cart');
-    htmlGetLocalStorage('makeshop_mobile_conversion');
-
+    settingHtmlGetLocalStorage('makeshop');
     $(document).on('change','#makeshop_mobon_id',function (){
         let mobon_id = $(this).val();
-
-        setLocalStorage('makeshop_mobon_id',mobon_id);
-        htmlSetLocalStorage('makeshop_web_footer',mobon_id);
-        htmlSetLocalStorage('makeshop_web_detail',mobon_id);
-        htmlSetLocalStorage('makeshop_web_cart',mobon_id);
-        htmlSetLocalStorage('makeshop_web_conversion',mobon_id);
-        htmlSetLocalStorage('makeshop_mobile_footer',mobon_id);
-        htmlSetLocalStorage('makeshop_mobile_detail',mobon_id);
-        htmlSetLocalStorage('makeshop_mobile_cart',mobon_id);
-        htmlSetLocalStorage('makeshop_mobile_conversion',mobon_id);
+        settingHtmlSetLocalStorage('makeshop',mobon_id)
     });
 
     /**
@@ -174,29 +183,12 @@ document.addEventListener('DOMContentLoaded',function (){
         $("#godomall_rent_mobon_id").val(getLocalStorage('godomall_rent_mobon_id'));
     }
 
-    htmlGetLocalStorage('godomall_rent_web_footer');
-    htmlGetLocalStorage('godomall_rent_web_detail');
-    htmlGetLocalStorage('godomall_rent_web_cart');
-    htmlGetLocalStorage('godomall_rent_web_conversion');
-    htmlGetLocalStorage('godomall_rent_mobile_footer');
-    htmlGetLocalStorage('godomall_rent_mobile_detail');
-    htmlGetLocalStorage('godomall_rent_mobile_cart');
-    htmlGetLocalStorage('godomall_rent_mobile_conversion');
+    settingHtmlGetLocalStorage('godomall_rent');
 
     $(document).on('change','#godomall_rent_mobon_id',function (){
         let mobon_id = $(this).val();
-
-        setLocalStorage('godomall_rent_mobon_id',mobon_id);
-        htmlSetLocalStorage('godomall_rent_web_footer',mobon_id);
-        htmlSetLocalStorage('godomall_rent_web_detail',mobon_id);
-        htmlSetLocalStorage('godomall_rent_web_cart',mobon_id);
-        htmlSetLocalStorage('godomall_rent_web_conversion',mobon_id);
-        htmlSetLocalStorage('godomall_rent_mobile_footer',mobon_id);
-        htmlSetLocalStorage('godomall_rent_mobile_detail',mobon_id);
-        htmlSetLocalStorage('godomall_rent_mobile_cart',mobon_id);
-        htmlSetLocalStorage('godomall_rent_mobile_conversion',mobon_id);
+        settingHtmlSetLocalStorage('godomall_rent',mobon_id)
     });
-
 
     /**
      * 독립몰 관련 스크립트
@@ -218,27 +210,11 @@ document.addEventListener('DOMContentLoaded',function (){
         $("#self_mobon_id").val(getLocalStorage('self_mobon_id'));
     }
 
-    htmlGetLocalStorage('self_web_footer');
-    htmlGetLocalStorage('self_web_detail');
-    htmlGetLocalStorage('self_web_cart');
-    htmlGetLocalStorage('self_web_conversion');
-    htmlGetLocalStorage('self_mobile_footer');
-    htmlGetLocalStorage('self_mobile_detail');
-    htmlGetLocalStorage('self_mobile_cart');
-    htmlGetLocalStorage('self_mobile_conversion');
+    settingHtmlGetLocalStorage('self');
 
     $(document).on('change','#self_mobon_id',function (){
         let mobon_id = $(this).val();
-
-        setLocalStorage('self_mobon_id',mobon_id);
-        htmlSetLocalStorage('self_web_footer',mobon_id);
-        htmlSetLocalStorage('self_web_detail',mobon_id);
-        htmlSetLocalStorage('self_web_cart',mobon_id);
-        htmlSetLocalStorage('self_web_conversion',mobon_id);
-        htmlSetLocalStorage('self_mobile_footer',mobon_id);
-        htmlSetLocalStorage('self_mobile_detail',mobon_id);
-        htmlSetLocalStorage('self_mobile_cart',mobon_id);
-        htmlSetLocalStorage('self_mobile_conversion',mobon_id);
+        settingHtmlSetLocalStorage('self',mobon_id)
     });
 
     function htmlGetLocalStorage(type){
