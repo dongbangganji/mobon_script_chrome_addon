@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded',function (){
     }
 
     function settingHtmlSetLocalStorage(name,mobon_id){
-        adIdCheck(mobon_id);
+        adIdCheck(mobon_id,name);
         setLocalStorage(name+'_mobon_id',mobon_id);
         htmlSetLocalStorage(name+'_web_footer',mobon_id);
         htmlSetLocalStorage(name+'_web_detail',mobon_id);
@@ -91,20 +91,22 @@ document.addEventListener('DOMContentLoaded',function (){
         htmlSetLocalStorage(name+'_mobile_conversion',mobon_id);
     }
 
-    function adIdCheck(name){
+    function adIdCheck(mobon_id,name){
         $.ajax({
-            url: "http://cdn.megadata.co.kr/dist/config/id/"+name+".json",
+            url: "http://cdn.megadata.co.kr/dist/config/id/"+mobon_id+".json",
             type: "get",
             cache: false,
             dataType: "json",
             data: "",
             success: function(data){
-                console.log(data.hostingType);
-                console.log(data.version);
+                $('#'+name+'_id_check').html(data.hostingType);
+                setLocalStorage(name+'_id_check',data.hostingType);
                 return true;
             },
             error: function (request, status, error){
-                alert('광고주아이디를 확인해주세요');
+                $('#'+name+'_id_check').html('광고주 확인해주세요');
+                setLocalStorage(name+'_id_check','광고주 확인해주세요');
+                // alert('광고주아이디를 확인해주세요');
                 return false;
             }
         });
@@ -128,6 +130,9 @@ document.addEventListener('DOMContentLoaded',function (){
 
     if(getLocalStorage('cafe24_mobon_id')){
         $("#cafe24_mobon_id").val(getLocalStorage('cafe24_mobon_id'));
+    }
+    if(getLocalStorage('cafe24_id_check')){
+        $("#cafe24_id_check").html(getLocalStorage('cafe24_id_check'));
     }
 
     settingHtmlGetLocalStorage('cafe24');
@@ -156,6 +161,9 @@ document.addEventListener('DOMContentLoaded',function (){
     if(getLocalStorage('makeshop_mobon_id')){
         $("#makeshop_mobon_id").val(getLocalStorage('makeshop_mobon_id'));
     }
+    if(getLocalStorage('makeshop_id_check')){
+        $("#makeshop_id_check").html(getLocalStorage('makeshop_id_check'));
+    }
 
     settingHtmlGetLocalStorage('makeshop');
     $(document).on('change','#makeshop_mobon_id',function (){
@@ -181,6 +189,9 @@ document.addEventListener('DOMContentLoaded',function (){
 
     if(getLocalStorage('godomall_rent_mobon_id')){
         $("#godomall_rent_mobon_id").val(getLocalStorage('godomall_rent_mobon_id'));
+    }
+    if(getLocalStorage('godomall_rent_id_check')){
+        $("#godomall_rent_id_check").html(getLocalStorage('godomall_rent_id_check'));
     }
 
     settingHtmlGetLocalStorage('godomall_rent');
@@ -208,6 +219,9 @@ document.addEventListener('DOMContentLoaded',function (){
 
     if(getLocalStorage('self_mobon_id')){
         $("#self_mobon_id").val(getLocalStorage('self_mobon_id'));
+    }
+    if(getLocalStorage('self_id_check')){
+        $("#self_id_check").html(getLocalStorage('self_id_check'));
     }
 
     settingHtmlGetLocalStorage('self');

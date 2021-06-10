@@ -28,6 +28,7 @@
             <button class="btn type_group_btn" data-type="godomall_rent" id="godomall_rent_group_btn">고도몰5_임대</button>
             <button class="btn type_group_btn" data-type="self" id="self_group_btn">독립몰</button>
         </div>
+        <hr>
         <div class="type_list_group">
             <button class="btn type_group_btn" data-type="insite" id="insite_group_btn">인사이트</button>
         </div>
@@ -35,7 +36,11 @@
 
     <div class="tab_group type_tab_group hide" id="self_group">
         <div class="btn_group">
-            <p class="form_group"><input type="text" id='self_mobon_id' placeholder="mobon_id"/></p>
+            <p class="form_group">
+                <input type="text" id='self_mobon_id' placeholder="mobon_id"/>
+                <span class="id_code">self_hosted</span>
+                <span class="id_check" id="self_id_check">아이디를 입력해주세요</span>
+            </p>
         </div>
         <hr>
         <div class="btn_group">
@@ -433,7 +438,11 @@
 
     <div class="tab_group type_tab_group hide" id="godomall_rent_group">
         <div class="btn_group">
-            <p class="form_group"><input type="text" id='godomall_rent_mobon_id' placeholder="mobon_id"/></p>
+            <p class="form_group">
+                <input type="text" id='godomall_rent_mobon_id' placeholder="mobon_id"/>
+                <span class="id_code">godomall_rent</span>
+                <span class="id_check" id="godomall_rent_id_check">아이디를 입력해주세요</span>
+            </p>
         </div>
         <hr>
         <div class="btn_group">
@@ -671,7 +680,11 @@
 
     <div class="tab_group type_tab_group hide" id="makeshop_group">
         <div class="btn_group">
-            <p class="form_group"><input type="text" id='makeshop_mobon_id' placeholder="mobon_id"/></p>
+            <p class="form_group">
+                <input type="text" id='makeshop_mobon_id' placeholder="mobon_id"/>
+                <span class="id_code">makeshop_d4</span>
+                <span class="id_check" id="makeshop_id_check">아이디를 입력해주세요</span>
+            </p>
         </div>
         <hr>
         <div class="btn_group">
@@ -925,7 +938,11 @@
 
     <div class="tab_group type_tab_group hide" id="cafe24_group">
         <div class="btn_group">
-            <p class="form_group"><input type="text" id='cafe24_mobon_id' placeholder="mobon_id"/></p>
+            <p class="form_group">
+                <input type="text" id='cafe24_mobon_id' placeholder="mobon_id"/>
+                <span class="id_code">cafe24_smart</span>
+                <span class="id_check" id="cafe24_id_check">아이디를 입력해주세요</span>
+            </p>
         </div>
         <hr>
         <div class="btn_group">
@@ -1118,7 +1135,7 @@
     <div class="tab_group type_tab_group hide" id="insite_group">
         <div class="btn_group">
             <button type="button" class="btn" id="insite_reset">초기화</button>
-            <button type="button" class="btn" id="insite_insert">인사이트삽입</button>
+            <button type="button" class="btn" id="insite_insert">인사이트확인삽입</button>
         <div class="btn_group">
         <hr>
         </div>

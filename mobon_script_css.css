@@ -65,7 +65,7 @@ textarea{
     text-align: center;
 }
 input{
-    width: 100%;
+    width: 30%;
 }
 .info{
     border: 1px solid #e0e0e0;
@@ -82,4 +82,18 @@ p{
     border: 1px solid #e0e0e0;
     border-radius: 5px;
     width: calc(100% - 10px);
+}
+.id_check{
+    border: solid 1px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #ff3b3b;
+    font-weight: 800;
+}
+.id_code{
+    border: solid 1px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #f35d0c;
+    font-weight: 800;
 }
