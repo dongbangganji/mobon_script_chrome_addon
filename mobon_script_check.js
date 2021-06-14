@@ -79,7 +79,6 @@ document.addEventListener('DOMContentLoaded',function (){
     }
 
     function settingHtmlSetLocalStorage(name,mobon_id){
-        adIdCheck(mobon_id,name);
         setLocalStorage(name+'_mobon_id',mobon_id);
         htmlSetLocalStorage(name+'_web_footer',mobon_id);
         htmlSetLocalStorage(name+'_web_detail',mobon_id);
@@ -91,25 +90,43 @@ document.addEventListener('DOMContentLoaded',function (){
         htmlSetLocalStorage(name+'_mobile_conversion',mobon_id);
     }
 
+    $(document).on('click','.adIdCheck',function (){
+        let name = $(this).data('name');
+        let mobon_id = $('#'+name+'_mobon_id').val();
+
+        if(!mobon_id){
+            alert('광고주아이디를 입력해주세요');
+            return false;
+        }
+        adIdCheck(mobon_id,name);
+    });
+
+    let duplicate_call_check = true;
     function adIdCheck(mobon_id,name){
-        $.ajax({
-            url: "http://cdn.megadata.co.kr/dist/config/id/"+mobon_id+".json",
-            type: "get",
-            cache: false,
-            dataType: "json",
-            data: "",
-            success: function(data){
-                $('#'+name+'_id_check').html(data.hostingType);
-                setLocalStorage(name+'_id_check',data.hostingType);
-                return true;
-            },
-            error: function (request, status, error){
-                $('#'+name+'_id_check').html('광고주 확인해주세요');
-                setLocalStorage(name+'_id_check','광고주 확인해주세요');
-                // alert('광고주아이디를 확인해주세요');
-                return false;
-            }
-        });
+        if(duplicate_call_check === false){
+            return false
+        }else{
+            $.ajax({
+                url: "http://cdn.megadata.co.kr/dist/config/id/"+mobon_id+".json",
+                type: "get",
+                cache: false,
+                dataType: "json",
+                data: "",
+                success: function(data){
+                    $('#'+name+'_id_check').html(data.hostingType);
+                    setLocalStorage(name+'_id_check',data.hostingType);
+                    duplicate_call_check = true;
+                    return true;
+                },
+                error: function (request, status, error){
+                    setLocalStorage(name+'_id_check','ID없음');
+                    $('#'+name+'_id_check').html('ID없음');
+                    alert('광고주ID를 확인해주세요');
+                    duplicate_call_check = true;
+                    return false;
+                }
+            });
+        }
     }
 
     /**

@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
   "name": "mobon script check",
-  "version": "1.7.7",
-  "version_name": "1.7.7 beta",
-  "description": "Shortcut key : ctrl + Shift + Q|1.7.7 광고주 아이디 정상적인지 자동 확인2|1.7.6 광고주 아이디 정상적인지 자동 확인|1.7.5 독립몰 버그 수정 작업",
+  "version": "1.7.8",
+  "version_name": "1.7.8 beta",
+  "description": "Shortcut key : ctrl + Shift + Q|1.7.8 광고주 아이디 정상적인지 수동 버튼으로 변경|1.7.7 광고주 아이디 정상적인지 자동 확인2|1.7.6 광고주 아이디 정상적인지 자동 확인|1.7.5 독립몰 버그 수정 작업",
   "permissions": [
     "https://*/*",
     "http://*/*"
