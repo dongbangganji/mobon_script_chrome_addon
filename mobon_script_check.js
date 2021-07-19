@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded',function (){
         htmlRemoveLocalStorage('breakAway');
         htmlRemoveLocalStorage('breakAwayFull');
         htmlRemoveLocalStorage('shopDetail');
+        htmlRemoveLocalStorage('shopDetail2');
         htmlRemoveLocalStorage('shopDetailTogether');
         htmlRemoveLocalStorage('naverQuick');
         htmlRemoveLocalStorage('naverBacon');
@@ -297,6 +298,7 @@ document.addEventListener('DOMContentLoaded',function (){
     htmlGetInsiteLocalStorage('breakAway');
     htmlGetInsiteLocalStorage('breakAwayFull');
     htmlGetInsiteLocalStorage('shopDetail');
+    htmlGetInsiteLocalStorage('shopDetail2');
     htmlGetInsiteLocalStorage('shopDetailTogether');
     htmlGetInsiteLocalStorage('naverQuick');
     htmlGetInsiteLocalStorage('naverBacon');

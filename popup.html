@@ -1148,6 +1148,7 @@
             <button type="button" class="btn insite_btn" id="insite_breakAway_btn" data-type="breakAway">이탈방지(팝업) 지면</button>
             <button type="button" class="btn insite_btn" id="insite_breakAwayFull_btn" data-type="breakAwayFull">이탈-전면배너</button>
             <button type="button" class="btn insite_btn" id="insite_shopDetail_btn" data-type="shopDetail">상품상세-추천상품(대체상품)</button>
+            <button type="button" class="btn insite_btn" id="insite_shopDetail2_btn" data-type="shopDetail2">[이슈]상품상세-추천상품(대체상품)</button>
             <button type="button" class="btn insite_btn" id="insite_shopDetailTogether_btn" data-type="shopDetailTogether">상품상세 - 같이 구매 한 상품</button>
             <button type="button" class="btn insite_btn" id="insite_naverQuick_btn" data-type="naverQuick">네이버 퀵링크</button>
             <button type="button" class="btn insite_btn" id="insite_naverBacon_btn" data-type="naverBacon">네이버 바콘</button>
@@ -1242,10 +1243,35 @@ mbris("{{sno}}");
 mbris("{{sno}}");
 </script>
 <!-- 광고 노출 영역 -->
-<div id="mbris_detail_section" style="display: none !important; position: relative;"></div>
+<div id="mbris_detail_section"></div>
 <!-- Enliple Insite shopDetail end -->
 </textarea>
 <textarea class="insite-textarea" data-type="shopDetail_html" disabled>
+</textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divTableRow tab-insite" id="insite-shopDetail2" style="display: none;">
+                    <div class="divTableCell">
+                        <p class="title">[이슈]상품상세-추천상품(대체상품)<button class="btn btn-right copy_clipboard">복사</button></p>
+                        <p class="info">
+                            <b>설치 위치</b><br>
+                            상품 상세 제공 시, 타이밍 이슈로 프레임이 원하는 위치에 위치 하지 않으면 아래 스크립트 이용
+                        </p>
+                        <p class="form_group"><input type="text" class="sno-input-box" placeholder="상품상세-추천상품(대체상품)" data-type="shopDetail2" /></p>
+                        <p>
+<textarea class="insite-textarea hide" data-type="shopDetail2">
+<!-- Enliple Insite shopDetail start -->
+<script type="text/javascript">(function(m,b,r,i,s){m.mbris=m.mbris||function(){(m.mbris.q=m.mbris.q||[]).push(arguments)};i=b.createElement(r);i.async=!0;i.defer=!0;i.src="https://cdn.megadata.co.kr/dist/prod/enp_mbris.min.js";0<b.querySelectorAll("script[src*=enp_mbris]").length&&m.ENP_MBRIS_INVOKE?m.ENP_MBRIS_INVOKE():(s=b.getElementsByTagName(r)[0],s.parentNode.insertBefore(i,s))})(window,document,"script");
+window.addEventListener('DOMContentLoaded', function () {
+	mbris("{{sno}}");
+});</script>
+<!-- 광고 노출 영역 -->
+<div id="mbris_detail_section"></div>
+<!-- Enliple Insite shopDetail end -->
+</textarea>
+<textarea class="insite-textarea" data-type="shopDetail2_html" disabled>
 </textarea>
                         </p>
                     </div>
@@ -1267,7 +1293,7 @@ mbris("{{sno}}");
 mbris("{{sno}}");
 </script>
 <!-- 광고 노출 영역 -->
-<div id="mbris_ar_detail_section" style="display: none !important; position: relative;"></div>
+<div id="mbris_ar_detail_section"></div>
 <!-- Enliple Insite shopDetail Together end -->
 </textarea>
 <textarea class="insite-textarea" data-type="shopDetailTogether_html" disabled>
