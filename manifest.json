@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
   "name": "mobon script check",
-  "version": "1.7.11",
-  "version_name": "1.7.11 beta",
-  "description": "Shortcut key : ctrl + Shift + Q|1.7.11 인사이트 스크립트 최신화 작업|1.7.10 ai 인사이트 문구 변경 수정 작업|1.7.9 안내문구 추가 및 변경 |1.7.8 광고주 아이디 정상적인지 수동 버튼으로 변경",
+  "version": "1.7.12",
+  "version_name": "1.7.12 beta",
+  "description": "Shortcut key : ctrl + Shift + Q|1.7.12 쇼핑렌즈가이드추가|1.7.11 인사이트 스크립트 최신화 작업|1.7.10 ai 인사이트 문구 변경 수정 작업|1.7.9 안내문구 추가 및 변경 |1.7.8 광고주 아이디 정상적인지 수동 버튼으로 변경",
   "permissions": [
     "https://*/*",
     "http://*/*"
