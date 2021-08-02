@@ -3,7 +3,7 @@
 ### Shortcut key : ctrl + Shift + Q
 ## 패치 목록
 ### test
-   git webhook test
+   git webhook test2
 ### 1.7.12
    1. 쇼핑렌즈 가이트 추가
 ### 1.7.11
