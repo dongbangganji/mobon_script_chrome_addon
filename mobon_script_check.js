@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded',function (){
         htmlRemoveLocalStorage('naverBacon');
         htmlRemoveLocalStorage('DBCollection');
         htmlRemoveLocalStorage('aiRecommend');
+        htmlRemoveLocalStorage('shoppingLens');
+        htmlRemoveLocalStorage('newTabShoppingLens');
     });
 
     function htmlRemoveLocalStorage(key){
@@ -304,6 +306,8 @@ document.addEventListener('DOMContentLoaded',function (){
     htmlGetInsiteLocalStorage('naverBacon');
     htmlGetInsiteLocalStorage('DBCollection');
     htmlGetInsiteLocalStorage('aiRecommend');
+    htmlGetInsiteLocalStorage('shoppingLens');
+    htmlGetInsiteLocalStorage('newTabShoppingLens');
 });
 function detail_mobonscript_move(){
     chrome.tabs.executeScript(null,{code:"document.getElementById('mbris_detail_section').scrollIntoView();"});
