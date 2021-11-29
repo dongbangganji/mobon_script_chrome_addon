@@ -1,0 +1,258 @@
+<div class="btn_group">
+    <p class="form_group">
+        <input type="text" id='makeshop_mobon_id' placeholder="mobon_id"/>
+        <button type="button" data-name="makeshop" class="btn adIdCheck" style="float: none;">체크</button>
+        <span class="id_code">makeshop_d4</span>
+        <span class="id_check" id="makeshop_id_check">확인전</span>
+    </p>
+</div>
+<hr>
+<div class="btn_group">
+    <p>웹사이트</p>
+    <p>
+        <button type="button" class="btn makeshop_btn" id="makeshop_web_footer_btn"     data-type="makeshop_web_footer">footer</button>
+        <button type="button" class="btn makeshop_btn" id="makeshop_web_detail_btn"     data-type="makeshop_web_detail">상품상세</button>
+        <button type="button" class="btn makeshop_btn" id="makeshop_web_cart_btn"       data-type="makeshop_web_cart">장바구니</button>
+        <button type="button" class="btn makeshop_btn" id="makeshop_web_conversion_btn" data-type="makeshop_web_conversion">주문완료</button>
+    </p>
+</div>
+<hr>
+<div class="btn_group">
+    <p>모바일</p>
+    <p>
+        <button type="button" class="btn makeshop_btn" id="makeshop_mobile_footer_btn"     data-type="makeshop_mobile_footer">footer</button>
+        <button type="button" class="btn makeshop_btn" id="makeshop_mobile_detail_btn"     data-type="makeshop_mobile_detail">상품상세</button>
+        <button type="button" class="btn makeshop_btn" id="makeshop_mobile_cart_btn"       data-type="makeshop_mobile_cart">장바구니</button>
+        <button type="button" class="btn makeshop_btn" id="makeshop_mobile_conversion_btn" data-type="makeshop_mobile_conversion">주문완료</button>
+    </p>
+</div>
+<hr>
+<div class="btn_group">
+    <p>기타</p>
+    <p>
+        <a href="https://www.makeshop.co.kr/newmakeshop/front/login.html" target="_blank"><button type="button" class="btn">관리자페이지</button></a>
+        <button type="button" class="btn makeshop_btn" id="makeshop_tooltip_group_btn" data-type="makeshop_tooltip_group">툴팁</button>
+    </p>
+</div>
+<hr>
+<div class="divTable">
+    <div class="divTableBody">
+
+        <div class="divTableRow makeshop_tab_group hide" id="makeshop_web_footer">
+            <div class="divTableCell">
+                <p class="title">web footer<button class="btn btn-right copy_clipboard">복사</button></p>
+                <p class="info">
+                    <b>설치 위치</b><br>
+                    [상단/측면/하단 디자인] - [하단] - [기본 하단]
+                </p>
+                <p>
+<textarea class="hide" id="makeshop_web_footer_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_makeshop_d4.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'common', '{{mobon_id}}', { device: 'W' });
+    enp('send', 'common', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                    <textarea id="makeshop_web_footer_textarea_html" disabled>
+</textarea>
+                </p>
+            </div>
+        </div>
+
+        <div class="divTableRow makeshop_tab_group hide" id="makeshop_web_detail">
+            <div class="divTableCell">
+                <p class="title">web 상품상세<button class="btn btn-right copy_clipboard">복사</button></p>
+                <p class="info">
+                    <b>설치 위치</b><br>
+                    [중앙 디자인] - [상품관련] - [상품 상세 페이지] - [기본 상세 페이지]<br>
+                    🚨 장바구니 또는 찜버튼 클릭시 이벤트 동작 안할때 버튼 Class에 아래 Class 추가<br>
+                    장바구니 :  enp_mobon_cart   /   찜 :  enp_mobon_wish<br>
+                </p>
+                <p>
+<textarea class="hide" id="makeshop_web_detail_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_makeshop_d4.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    var ENP_VAR = {};
+    ENP_VAR.soldOut = '<!--/if_soldout/-->Y<!--/else/-->N<!--/end_if/-->';
+    ENP_VAR.price = '<!--/number/price_consumer/-->';
+    ENP_VAR.dcPrice = '<!--/if_dc_price_sell(+1)/--><!--/number/dc_price_sell/--><!--/else/--><!--/number/price_sell/--><!--/end_if/-->';
+    enp('create', 'collect', '{{mobon_id}}', { device: 'W' });
+    enp('create', 'cart', '{{mobon_id}}', { device: 'W' });
+    enp('create', 'wish', '{{mobon_id}}', { device: 'W' });
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'W', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                    <textarea id="makeshop_web_detail_textarea_html" disabled>
+</textarea>
+                </p>
+            </div>
+        </div>
+
+        <div class="divTableRow makeshop_tab_group hide" id="makeshop_web_cart">
+            <div class="divTableCell">
+                <p class="title">web 장바구니 페이지<button class="btn btn-right copy_clipboard">복사</button></p>
+                <p class="info">
+                    <b>설치 위치</b><br>
+                    [중앙 디자인] - [주문관련] - [주문조회/후기 팝업] - [장바구니]
+                </p>
+                <p>
+<textarea class="hide" id="makeshop_web_cart_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_makeshop_d4.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'W', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                    <textarea id="makeshop_web_cart_textarea_html" disabled>
+</textarea>
+                </p>
+            </div>
+        </div>
+
+        <div class="divTableRow makeshop_tab_group hide" id="makeshop_web_conversion">
+            <div class="divTableCell">
+                <p class="title">web 주문완료 페이지<button class="btn btn-right copy_clipboard">복사</button></p>
+                <p class="info">
+                    <b>설치 위치</b><br>
+                    [중앙 디자인] - [주문관련] - [주문조회/후기 팝업] - [주문 완료]
+                </p>
+                <p>
+<textarea class="hide" id="makeshop_web_conversion_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_makeshop_d4.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'W' });
+    enp('send', 'conversion', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                    <textarea id="makeshop_web_conversion_textarea_html" disabled>
+</textarea>
+                </p>
+            </div>
+        </div>
+
+        <div class="divTableRow makeshop_tab_group hide" id="makeshop_mobile_footer">
+            <div class="divTableCell">
+                <p class="title">mobile footer<button class="btn btn-right copy_clipboard">복사</button></p>
+                <p class="info">
+                    <b>설치 위치</b><br>
+                    [하단] - [기본 하단]
+                </p>
+                <p>
+<textarea class="hide" id="makeshop_mobile_footer_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_makeshop_d4.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'common', '{{mobon_id}}', { device: 'M' });
+    enp('send', 'common', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                    <textarea id="makeshop_mobile_footer_textarea_html" disabled>
+</textarea>
+                </p>
+            </div>
+        </div>
+
+        <div class="divTableRow makeshop_tab_group hide" id="makeshop_mobile_detail">
+            <div class="divTableCell">
+                <p class="title">mobile 상품상세<button class="btn btn-right copy_clipboard">복사</button></p>
+                <p class="info">
+                    <b>설치 위치</b><br>
+                    [중앙 디자인] - [상품관련] - [상품 상세 페이지] - [기본 상세 페이지]<br>
+                    🚨 장바구니 또는 찜버튼 클릭시 이벤트 동작 안할때 버튼 Class에 아래 Class 추가<br>
+                    장바구니 :  enp_mobon_cart   /   찜 :  enp_mobon_wish
+                </p>
+                <p>
+<textarea class="hide" id="makeshop_mobile_detail_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_makeshop_d4.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    var ENP_VAR = {};
+    ENP_VAR.soldOut = '<!--/if_soldout/-->Y<!--/else/-->N<!--/end_if/-->';
+    ENP_VAR.price = '<!--/number/price_consumer/-->';
+    ENP_VAR.dcPrice = '<!--/if_dc_price_sell(+1)/--><!--/number/dc_price_sell/--><!--/else/--><!--/number/price_sell/--><!--/end_if/-->';
+    enp('create', 'collect', '{{mobon_id}}', { device: 'M' });
+    enp('create', 'cart', '{{mobon_id}}', { device: 'M' });
+    enp('create', 'wish', '{{mobon_id}}', { device: 'M' });
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'M', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                    <textarea id="makeshop_mobile_detail_textarea_html" disabled>
+</textarea>
+                </p>
+            </div>
+        </div>
+
+        <div class="divTableRow makeshop_tab_group hide" id="makeshop_mobile_cart">
+            <div class="divTableCell">
+                <p class="title">mobile 장바구니 페이지<button class="btn btn-right copy_clipboard">복사</button></p>
+                <p class="info">
+                    <b>설치 위치</b><br>
+                    [주문관련] - [장바구니]
+                </p>
+                <p>
+<textarea class="hide" id="makeshop_mobile_cart_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_makeshop_d4.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'M', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                    <textarea id="makeshop_mobile_cart_textarea_html" disabled>
+</textarea>
+                </p>
+            </div>
+        </div>
+
+        <div class="divTableRow makeshop_tab_group hide" id="makeshop_mobile_conversion">
+            <div class="divTableCell">
+                <p class="title">mobile 주문완료 페이지<button class="btn btn-right copy_clipboard">복사</button></p>
+                <p class="info">
+                    <b>설치 위치</b><br>
+                    [주문관련] - [주문 완료]
+                </p>
+                <p>
+<textarea class="hide" id="makeshop_mobile_conversion_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_makeshop_d4.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    var ENP_VAR = {};
+    ENP_VAR.product = [];
+    <!--/loop_order_product/-->
+    ENP_VAR.product.push({ totalPrice: "<!--/order_product@price/-->"});
+    <!--/end_loop/-->
+
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'M' });
+    enp('send', 'conversion', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                    <textarea id="makeshop_mobile_conversion_textarea_html" disabled>
+</textarea>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="makeshop_tooltip_group" class="hide">
+    메이크샵 3.x 버전 코드상에서 확인이 불가능할떄 처리 방법<br>
+    <br>
+    출처 : 김 대 웅 대리<br>
+    <br>
+    관리자 [마케팅센터]에서 포탈광고 탭의 모비온을 클릭하신 후<br>
+    접속되는 페이지 왼쪽 영역에서<br>
+    [네트워크 광고 > 네트워크 광고 기본 설정]으로 접속해주세요.<br>
+    그리고 모비온 설정 항목을 확인하시어<br>
+    [삭제] 버튼을 클릭하셔서 삭제하신 후 확인 부탁드립니다.<br>
+    <hr>
+    로그인이 안될시 웨일 브라우저로 접속해 볼것
+</div>

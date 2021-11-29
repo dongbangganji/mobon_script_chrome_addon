@@ -1,0 +1,238 @@
+<div class="btn_group">
+    <p class="form_group">
+        <input type="text" id='godomall_self_mobon_id' placeholder="mobon_id"/>
+        <button type="button" data-name="godomall_self" class="btn adIdCheck" style="float: none;">체크</button>
+        <span class="id_code">godomall_self</span>
+        <span class="id_check" id="godomall_self_id_check">확인전</span>
+    </p>
+</div>
+<hr>
+<div class="btn_group">
+    <p>웹사이트</p>
+    <p>
+        <button type="button" class="btn godomall_self_btn" id="godomall_self_web_footer_btn"     data-type="godomall_self_web_footer">footer</button>
+        <button type="button" class="btn godomall_self_btn" id="godomall_self_web_detail_btn"     data-type="godomall_self_web_detail">상품상세</button>
+        <button type="button" class="btn godomall_self_btn" id="godomall_self_web_cart_btn"       data-type="godomall_self_web_cart">장바구니</button>
+        <button type="button" class="btn godomall_self_btn" id="godomall_self_web_conversion_btn" data-type="godomall_self_web_conversion">주문완료</button>
+    </p>
+</div>
+<hr>
+<div class="btn_group">
+    <p>모바일</p>
+    <p>
+        <button type="button" class="btn godomall_self_btn" id="godomall_self_mobile_footer_btn"     data-type="godomall_self_mobile_footer">footer</button>
+        <button type="button" class="btn godomall_self_btn" id="godomall_self_mobile_detail_btn"     data-type="godomall_self_mobile_detail">상품상세</button>
+        <button type="button" class="btn godomall_self_btn" id="godomall_self_mobile_cart_btn"       data-type="godomall_self_mobile_cart">장바구니</button>
+        <button type="button" class="btn godomall_self_btn" id="godomall_self_mobile_conversion_btn" data-type="godomall_self_mobile_conversion">주문완료</button>
+    </p>
+</div>
+<hr>
+<div class="divTable">
+    <div class="divTableBody">
+
+        <div class="divTableRow godomall_self_tab_group hide" id="godomall_self_web_footer">
+            <div class="divTableCell">
+                <p class="title">web footer<button class="btn btn-right copy_clipboard">복사</button></p>
+                <p class="info">
+                    <b>설치 위치</b><br>
+                    [전체 레이아웃] - [하단 레이아웃]
+                </p>
+                <p>
+<textarea class="hide" id="godomall_self_web_footer_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+		(function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_godomall_self.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'common', '{{mobon_id}}', { device: 'W' });
+    enp('send', 'common', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                    <textarea id="godomall_self_web_footer_textarea_html" disabled>
+</textarea>
+                </p>
+            </div>
+        </div>
+
+        <div class="divTableRow godomall_self_tab_group hide" id="godomall_self_web_detail">
+            <div class="divTableCell">
+                <p class="title">web 상품상세<button class="btn btn-right copy_clipboard">복사</button></p>
+                <p class="info">
+                    <b>설치 위치</b><br>
+                    [상품] - [상품상세화면 (goods_view.htm)] <br>
+                    🚨 장바구니 또는 찜버튼 클릭시 이벤트 동작 안할때 버튼 Class에 아래 Class 추가 <br>
+                    장바구니 :  enp_mobon_cart   /   찜 :  enp_mobon_wish <br>
+                </p>
+                <p>
+<textarea class="hide" id="godomall_self_web_detail_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_godomall_self.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+		var ENP_VAR = {};
+		ENP_VAR.soldOut = '{runout}';
+		ENP_VAR.productName = '{goodsnm}';
+		ENP_VAR.dcPrice = '{price}';
+		ENP_VAR.price = '{consumer}';
+		ENP_VAR.category = '{category}';
+    enp('create', 'collect', '{{mobon_id}}', { device: 'W' });
+    enp('create', 'cart', '{{mobon_id}}', { device: 'W' });
+    enp('create', 'wish', '{{mobon_id}}', { device: 'W' });
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'W', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                    <textarea id="godomall_self_web_detail_textarea_html" disabled>
+</textarea>
+                </p>
+            </div>
+        </div>
+
+        <div class="divTableRow godomall_self_tab_group hide" id="godomall_self_web_cart">
+            <div class="divTableCell">
+                <p class="title">web 장바구니 페이지<button class="btn btn-right copy_clipboard">복사</button></p>
+                <p class="info">
+                    <b>설치 위치</b><br>
+                    [상품] - [장바구니 (goods_cart.htm)]
+                </p>
+                <p>
+<textarea class="hide" id="godomall_self_web_cart_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_godomall_self.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'W', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                    <textarea id="godomall_self_web_cart_textarea_html" disabled>
+</textarea>
+                </p>
+            </div>
+        </div>
+
+        <div class="divTableRow godomall_self_tab_group hide" id="godomall_self_web_conversion">
+            <div class="divTableCell">
+                <p class="title">web 주문완료 페이지<button class="btn btn-right copy_clipboard">복사</button></p>
+                <p class="info">
+                    <b>설치 위치</b><br>
+                    [주문] - [주문완료]
+                </p>
+                <p>
+<textarea class="hide" id="godomall_self_web_conversion_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_godomall_self.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+		var ENP_VAR = {};
+		ENP_VAR['delivery'] = '{delivery}';
+
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'W' });
+    enp('send', 'conversion', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                    <textarea id="godomall_self_web_conversion_textarea_html" disabled>
+</textarea>
+                </p>
+            </div>
+        </div>
+
+        <div class="divTableRow godomall_self_tab_group hide" id="godomall_self_mobile_footer">
+            <div class="divTableCell">
+                <p class="title">mobile footer<button class="btn btn-right copy_clipboard">복사</button></p>
+                <p class="info">
+                    <b>설치 위치</b><br>
+                    [전체 레이아웃 디자인] - [하단 레이아웃]
+                </p>
+                <p>
+<textarea class="hide" id="godomall_self_mobile_footer_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_godomall_self.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'common', '{{mobon_id}}', { device: 'M' });
+    enp('send', 'common', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                    <textarea id="godomall_self_mobile_footer_textarea_html" disabled>
+</textarea>
+                </p>
+            </div>
+        </div>
+
+        <div class="divTableRow godomall_self_tab_group hide" id="godomall_self_mobile_detail">
+            <div class="divTableCell">
+                <p class="title">mobile 상품상세<button class="btn btn-right copy_clipboard">복사</button></p>
+                <p class="info">
+                    <b>설치 위치</b><br>
+                    [상품] - [상품페이지 (view.htm)]
+                    🚨 장바구니 또는 찜버튼 클릭시 이벤트 동작 안할때 버튼 Class에 아래 Class 추가
+                    장바구니 :  enp_mobon_cart   /   찜 :  enp_mobon_wish
+                </p>
+                <p>
+<textarea class="hide" id="godomall_self_mobile_detail_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_godomall_self.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+		var ENP_VAR = {};
+		ENP_VAR.soldOut = '{runout}';
+		ENP_VAR.category = '{category}';
+    enp('create', 'collect', '{{mobon_id}}', { device: 'M' });
+    enp('create', 'cart', '{{mobon_id}}', { device: 'M' });
+    enp('create', 'wish', '{{mobon_id}}', { device: 'M' });
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'M', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                    <textarea id="godomall_self_mobile_detail_textarea_html" disabled>
+</textarea>
+                </p>
+            </div>
+        </div>
+
+        <div class="divTableRow godomall_self_tab_group hide" id="godomall_self_mobile_cart">
+            <div class="divTableCell">
+                <p class="title">mobile 장바구니 페이지<button class="btn btn-right copy_clipboard">복사</button></p>
+                <p class="info">
+                    <b>설치 위치</b><br>
+                    [상품] - [장바구니 (cart.htm)]
+                </p>
+                <p>
+<textarea class="hide" id="godomall_self_mobile_cart_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_godomall_self.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'M', paySys: 'naverPay' });
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                    <textarea id="godomall_self_mobile_cart_textarea_html" disabled>
+</textarea>
+                </p>
+            </div>
+        </div>
+
+        <div class="divTableRow godomall_self_tab_group hide" id="godomall_self_mobile_conversion">
+            <div class="divTableCell">
+                <p class="title">mobile 주문완료 페이지<button class="btn btn-right copy_clipboard">복사</button></p>
+                <p class="info">
+                    <b>설치 위치</b><br>
+                    [주문] - [주문완료]
+                </p>
+                <p>
+<textarea class="hide" id="godomall_self_mobile_conversion_textarea_origin">
+<!-- Enliple Tracker Start -->
+<script type="text/javascript">
+    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_godomall_self.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
+		var ENP_VAR = {};
+		ENP_VAR['delivery'] = '{delivery}';
+
+    enp('create', 'conversion', '{{mobon_id}}', { device: 'M' });
+    enp('send', 'conversion', '{{mobon_id}}');
+</script>
+<!-- Enliple Tracker End -->
+</textarea>
+                    <textarea id="godomall_self_mobile_conversion_textarea_html" disabled>
+</textarea>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

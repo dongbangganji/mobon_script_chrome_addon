@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded',function (){
+    $('#cafe24_group').load("/mobon_script/shop_srcipt_cafe24.html");
+    $('#makeshop_group').load("/mobon_script/shop_srcipt_makeshop.html");
+    $('#godomall_rent_group').load("/mobon_script/shop_srcipt_godomall_rent.html");
+    $('#godomall_self_group').load("/mobon_script/shop_srcipt_godomall_self.html");
+    $('#self_group').load("/mobon_script/shop_srcipt_self.html");
+
     document.getElementById("insite_insert").addEventListener("click",detail_mobonscript_check);
     document.getElementById("insite_insert").addEventListener("click",together_mobonscript_check);
     document.getElementById("insite_insert").addEventListener("click",ai_mobonscript_check);
@@ -219,6 +225,36 @@ document.addEventListener('DOMContentLoaded',function (){
     $(document).on('change','#godomall_rent_mobon_id',function (){
         let mobon_id = $(this).val();
         settingHtmlSetLocalStorage('godomall_rent',mobon_id)
+    });
+
+    /**
+     * godomall_self 관련 스크립트
+     */
+    $(document).on('click','.godomall_self_btn',function (){
+        $('.godomall_self_btn').removeClass('active');
+        $(this).addClass('active');
+        $('.godomall_self_tab_group').addClass('hide');
+        $('#'+$(this).data('type')).removeClass('hide');
+        setLocalStorage('godomall_self_tab_group', $(this).data('type'));
+    });
+
+    if(getLocalStorage('godomall_self_tab_group')){
+        $('#'+getLocalStorage('godomall_self_tab_group')+'_btn').addClass('active');
+        $('#'+getLocalStorage('godomall_self_tab_group')).removeClass('hide');
+    }
+
+    if(getLocalStorage('godomall_self_mobon_id')){
+        $("#godomall_self_mobon_id").val(getLocalStorage('godomall_self_mobon_id'));
+    }
+    if(getLocalStorage('godomall_self_id_check')){
+        $("#godomall_self_id_check").html(getLocalStorage('godomall_self_id_check'));
+    }
+
+    settingHtmlGetLocalStorage('godomall_self');
+
+    $(document).on('change','#godomall_self_mobon_id',function (){
+        let mobon_id = $(this).val();
+        settingHtmlSetLocalStorage('godomall_self',mobon_id)
     });
 
     /**
